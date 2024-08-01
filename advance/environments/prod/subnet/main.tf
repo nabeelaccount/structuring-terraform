@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 
-module "subnet" {
-  source = "../../../modules/subnet"
-
+resource "aws_subnet" "private" {
   vpc_id     = data.terraform_remote_state.vpc.outputs.vpc_id
   cidr_block = var.cidr_block
 
-  env = var.env
+  tags = {
+    "Name" = "${var.env}-private"
+  }
 }

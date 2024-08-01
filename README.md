@@ -26,4 +26,13 @@ limitation
 - Having many developers working on the same project may slow down the process
 
 ## Advance
-s
+The biggest change here is each terraform module will have it's own git repository.
+The biggest benefits is using git tags and version control for the modules.
+
+The disadvantage of using this method is it can quickly become overwhelming if you have a large number of modules. This is especially true if you have a large team of engineers working on the infrastructure code. To limit the number of repositories, consider grouping relatable infrastucture tools that are required to be deployed in block, together. A good example is VPC, Subnet and Internet Gateway.
+
+
+## Summary
+Overall, intermediate may be the best tool if the infrastructure is maintained by a small team or a single person. As the team grows with different people working on different projects or you have multiple client projects, the advance setup using individual repositories and espcially version control tags, may be the best tool.
+
+
