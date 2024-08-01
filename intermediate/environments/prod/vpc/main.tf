@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../../../modules/vpc-v2"
+  source = "../../../modules/vpc"
 
   env           = var.env
   cidr_block    = var.cidr_block
